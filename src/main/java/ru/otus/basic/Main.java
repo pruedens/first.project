@@ -77,13 +77,4 @@ public class Main {
             System.out.println(minus);
         }
     }
-
-    /* При запуске приложения, запросите у пользователя число от 1 до 5, после ввода которого выполните метод,
-    соответствующий указанному номеру (если методу требуются аргументы, то сгенерируйте их через Math.random());
-     */
-
-    public static void scanner(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите число от 1 до 5:");
-        int number = scanner.nextInt();    }
 }
