@@ -1,5 +1,7 @@
 package ru.otus.basic;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,7 +9,7 @@ public class Main {
         checkSign(6, 7, 8);
         selectColor();
         compareNumbers();
-        addOrSubtractAndPrint(5,6,false);
+        addOrSubtractAndPrint(5, 6, false);
     }
 
     // (1) Реализуйте метод greetings(), который при вызове должен отпечатать в столбец 4 слова: Hello, World, from, Java.
@@ -62,6 +64,7 @@ public class Main {
             System.out.println("a < b");
         }
     }
+
     /* (5) Создайте метод addOrSubtractAndPrint(int initValue, int delta, boolean increment). Если increment = true, то метод должен к
     initValue прибавить delta и отпечатать в консоль результат, в противном случае - вычесть;
      */
@@ -74,8 +77,4 @@ public class Main {
             System.out.println(minus);
         }
     }
-
-    /* При запуске приложения, запросите у пользователя число от 1 до 5, после ввода которого выполните метод,
-    соответствующий указанному номеру (если методу требуются аргументы, то сгенерируйте их через Math.random());
-     */
 }
