@@ -1,14 +1,23 @@
 package ru.otus.basic;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
-        greetings();
-        checkSign(6, 7, 8);
-        selectColor();
-        compareNumbers();
-        addOrSubtractAndPrint(5,6,false);
+        //greetings();
+        //checkSign(6, 7, 8);
+        //selectColor();
+        //compareNumbers();
+        //addOrSubtractAndPrint(5, 6, false);
+        printMessage(5, "Привет мир");
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        sumElementsMoreThan5(array);
+        fullArray(array, 5);
+        sumArray(array,10);
     }
+
+    // ДОМАШНЕЕ ЗАДАНИЕ 1
 
     // (1) Реализуйте метод greetings(), который при вызове должен отпечатать в столбец 4 слова: Hello, World, from, Java.
     public static void greetings() {
@@ -62,6 +71,7 @@ public class Main {
             System.out.println("a < b");
         }
     }
+
     /* (5) Создайте метод addOrSubtractAndPrint(int initValue, int delta, boolean increment). Если increment = true, то метод должен к
     initValue прибавить delta и отпечатать в консоль результат, в противном случае - вычесть;
      */
@@ -77,5 +87,50 @@ public class Main {
 
     /* При запуске приложения, запросите у пользователя число от 1 до 5, после ввода которого выполните метод,
     соответствующий указанному номеру (если методу требуются аргументы, то сгенерируйте их через Math.random());
+     */
+
+    // ДОМАШНЕЕ ЗАДАНИЕ 2
+    // (1) Реализуйте метод, принимающий в качестве аргументов целое число и строку, и печатающий в консоль строку указанное количество раз
+    public static void printMessage(int number, String text) {
+        for (int i = 0; i < number; i++) {
+            System.out.println(text);
+        }
+    }
+
+    /* (2) Реализуйте метод, принимающий в качестве аргумента целочисленный массив, суммирующий все
+    элементы, значение которых больше 5, и печатающий полученную сумму в консоль
+     */
+    public static void sumElementsMoreThan5(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 5) {
+                sum += arr[i];
+            }
+        }
+        System.out.println("Сумма элементов, которые больше 5: " + sum);
+    }
+
+    /* (3) Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на целочисленный
+    массив, метод должен заполнить каждую ячейку массива указанным числом
+     */
+    public static void fullArray(int[] arr, int number) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = number;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    /* (4) Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на целочисленный
+    массив, увеличивающий каждый элемент массива на указанное число;
+     */
+    public static void sumArray(int[] arr, int value) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += value;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    /* (5) Реализуйте метод, принимающий в качестве аргумента целочисленный массив, и печатающий в
+    консоль информацию о том, сумма элементов какой из половин массива больше
      */
 }
