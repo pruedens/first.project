@@ -14,7 +14,9 @@ public class Main {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         sumElementsMoreThan5(array);
         fullArray(array, 5);
-        sumArray(array,10);
+        sumArray(array, 10);
+        int[] array2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        compareArrays(array2);
     }
 
     // ДОМАШНЕЕ ЗАДАНИЕ 1
@@ -133,4 +135,28 @@ public class Main {
     /* (5) Реализуйте метод, принимающий в качестве аргумента целочисленный массив, и печатающий в
     консоль информацию о том, сумма элементов какой из половин массива больше
      */
+    public static void compareArrays(int[] arr) {
+        int middleArray = arr.length / 2;
+        int sumFirstPart = 0;
+        int sumSecondPart = 0;
+
+        for (int i = 0; i < middleArray; i++) {
+            sumFirstPart += arr[i];
+        }
+        for (int i = middleArray; i < arr.length; i++) {
+            sumSecondPart += arr[i];
+        }
+
+        if (arr.length % 2 == 1) {
+            sumSecondPart += arr[middleArray];
+        }
+
+        if (sumFirstPart > sumSecondPart) {
+            System.out.println("Сумма элементов первой половины массива больше: " + sumFirstPart);
+        } else if (sumSecondPart > sumFirstPart) {
+            System.out.println("Сумма элементов второй половины массива больше: " + sumSecondPart);
+        } else {
+            System.out.println("Суммы элементов двух половин массива равны: " + sumFirstPart + " " + sumSecondPart);
+        }
+    }
 }
