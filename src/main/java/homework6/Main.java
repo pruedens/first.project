@@ -16,9 +16,9 @@ public class Main {
         System.out.println("Состояние котов:");
         for (Cat cat : cats) {
             if (cat.isHungry()) {
-                System.out.println(cat.getName() + " голодный");
+                System.out.println(cat.getName() + " голодный(ая)");
             } else {
-                System.out.println(cat.getName() + " сытый");
+                System.out.println(cat.getName() + " сытый(ая)");
             }
         }
     }

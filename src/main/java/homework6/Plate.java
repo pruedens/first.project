@@ -13,7 +13,7 @@ public class Plate {
         if (currentFood + amount <= maxFood) {
             currentFood += amount;
         } else {
-            System.out.println("В тарелке уже лежит максимальное количество еды.");
+            System.out.println("В тарелке лежит максимальное количество еды.");
         }
     }
 

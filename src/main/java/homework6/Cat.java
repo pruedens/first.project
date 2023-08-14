@@ -15,9 +15,9 @@ public class Cat {
         if (plate.getCurrentFood() >= appetite) {
             plate.decreaseFood(appetite);
             hungry = false;
-            System.out.println(name + " покушал еды из тарелки.");
+            System.out.println(name + " покушал(а) еды из тарелки");
         } else {
-            System.out.println(name + " не покушал еды из тарелки, потому что ее там недостаточно.");
+            System.out.println(name + " не покушал(а) еды из тарелки, потому что ее там недостаточно");
         }
     }
 
