@@ -23,8 +23,10 @@ public class Main {
 
         person.enterTransport(bicycle);
         person.move(100, LocalityType.PLAIN);
+        person.leaveTransport();
 
         person.enterTransport(offRoadVehicle);
         person.move(100, LocalityType.PLAIN);
+        person.leaveTransport();
     }
 }
