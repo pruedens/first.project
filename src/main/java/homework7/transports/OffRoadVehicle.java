@@ -4,8 +4,10 @@ import homework7.AbstractTransport;
 import homework7.LocalityType;
 
 public class OffRoadVehicle extends AbstractTransport {
+
+    private static final LocalityType[] RESTRICTED_TERRAINS = new LocalityType[0];
     public OffRoadVehicle() {
-        super("вездеход", 70, 0, new LocalityType[0]);
+        super("вездеход", 70, 0, RESTRICTED_TERRAINS);
     }
 
     @Override

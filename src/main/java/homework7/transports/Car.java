@@ -5,8 +5,11 @@ import homework7.LocalityType;
 
 
 public class Car extends AbstractTransport {
+
+    private static final LocalityType[] RESTRICTED_TERRAINS = new LocalityType[]{LocalityType.DENSE_FOREST, LocalityType.SWAMP};
+
     public Car() {
-        super("машина", 1000, 0, new LocalityType[]{LocalityType.DENSE_FOREST, LocalityType.SWAMP});
+        super("машина", 1000, 0, RESTRICTED_TERRAINS);
     }
 
     @Override

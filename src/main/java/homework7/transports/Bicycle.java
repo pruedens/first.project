@@ -4,8 +4,10 @@ import homework7.AbstractTransport;
 import homework7.LocalityType;
 
 public class Bicycle extends AbstractTransport {
+
+    private static final LocalityType[] RESTRICTED_TERRAINS = new LocalityType[]{LocalityType.SWAMP};
     public Bicycle() {
-        super("велосипед", 0, 150, new LocalityType[]{LocalityType.SWAMP});
+        super("велосипед", 0, 150, RESTRICTED_TERRAINS);
     }
 
     @Override

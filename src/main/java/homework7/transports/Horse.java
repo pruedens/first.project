@@ -4,8 +4,11 @@ import homework7.AbstractTransport;
 import homework7.LocalityType;
 
 public class Horse extends AbstractTransport {
+
+    private static final LocalityType[] RESTRICTED_TERRAINS = new LocalityType[]{LocalityType.SWAMP};
+
     public Horse() {
-        super("лошадь", 0, 100, new LocalityType[]{LocalityType.SWAMP});
+        super("лошадь", 0, 100, RESTRICTED_TERRAINS);
     }
 
     @Override
